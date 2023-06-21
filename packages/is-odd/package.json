@@ -3,5 +3,9 @@
   "version": "0.0.1",
   "dependencies": {
     "@share/is-even": "*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://localhost:4873/"
   }
 }
