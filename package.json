@@ -2,10 +2,15 @@
   "name": "monorepo-share",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install"
+  },
   "private": true,
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "@commitlint/config-nx-scopes": "^17.6.4",
     "@nx/cypress": "16.4.0-beta.8",
     "@nx/eslint-plugin": "16.4.0-beta.8",
     "@nx/js": "16.4.0-beta.8",
@@ -39,7 +44,9 @@
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^8.0.3",
     "jsdom": "~22.1.0",
+    "lint-staged": "^13.2.2",
     "nx": "16.3.2",
     "prettier": "^2.6.2",
     "sass": "^1.55.0",
@@ -55,5 +62,14 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tslib": "^2.3.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --write",
+      "eslint --quiet"
+    ]
   }
 }
