@@ -1,2 +1,3 @@
 export * from './lib/is-even';
-export * from './utils'
+export * from './utils';
+console.log('is-even');
