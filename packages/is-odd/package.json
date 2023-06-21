@@ -1,8 +1,8 @@
 {
   "name": "@share/is-odd",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
-    "@share/is-even": "*"
+    "@share/is-even": "^0.0.2"
   },
   "publishConfig": {
     "access": "public",
