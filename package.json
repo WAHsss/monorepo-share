@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cz": "git-cz"
   },
   "private": true,
   "devDependencies": {
@@ -36,7 +37,9 @@
     "@typescript-eslint/parser": "^5.58.0",
     "@vitejs/plugin-react": "^4.0.0",
     "@vitest/ui": "^0.32.0",
+    "commitizen": "^4.3.0",
     "cypress": "^12.11.0",
+    "cz-lerna-changelog": "^2.0.3",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
@@ -71,5 +74,10 @@
       "prettier --write",
       "eslint --quiet"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
   }
 }
